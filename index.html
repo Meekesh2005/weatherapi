@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="weather-clear">
+    <div class="bg-animated" id="bgAnimated"></div>
+
+    <main class="app">
+      <section class="weather-card">
+        <p class="premium-tag">Premium Weather Experience</p>
+        <h1>Weather App</h1>
+        <p class="subtitle">Modern weather with smooth animations</p>
+
+        <form id="searchForm" class="search-wrap">
+          <input id="cityInput" type="text" placeholder="Search city (e.g. London)" required />
+          <button type="submit">Search</button>
+        </form>
+
+        <div class="controls">
+          <button id="locationBtn" type="button">Use My Location</button>
+          <button id="unitBtn" type="button">Switch to °F</button>
+        </div>
+
+        <div id="loading" class="loading hidden">
+          <span class="spinner"></span>
+          <span>Fetching weather...</span>
+        </div>
+
+        <p id="errorMessage" class="error hidden"></p>
+
+        <article id="weatherInfo" class="weather-info hidden">
+          <div class="main-row">
+            <div>
+              <h2 id="cityName">City</h2>
+              <p id="description">Condition</p>
+            </div>
+            <img id="weatherIcon" src="" alt="Weather icon" />
+          </div>
+
+          <div class="temp-row">
+            <span id="temperature" class="temperature">--°</span>
+          </div>
+
+          <div class="metrics">
+            <div class="metric">
+              <span>Humidity</span>
+              <strong id="humidity">--%</strong>
+            </div>
+            <div class="metric">
+              <span>Wind</span>
+              <strong id="wind">-- m/s</strong>
+            </div>
+            <div class="metric">
+              <span>Feels Like</span>
+              <strong id="feelsLike">--°</strong>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
